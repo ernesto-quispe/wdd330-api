@@ -52,7 +52,7 @@ function getRandomQuestion(max1, max2, level = 'easy', operator = '') {
     let num1 = Math.floor(Math.random() * max1) + 1;
     let num2 = Math.floor(Math.random() * max2) + 1;
 
-    if ((operator === '-' || operator === '/') && num1 < num2) {
+    if ((operator === '-' || operator === '/') && num1 < num2 && level == "easy") {
         [num1, num2] = [num2, num1];
     }
 
