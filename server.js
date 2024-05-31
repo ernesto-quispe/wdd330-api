@@ -72,6 +72,6 @@ app.get('/api/random', (req, res) => {
     res.json(question);
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://127.0.0.1:${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running at http://127.0.0.1:${PORT}`);
 });
