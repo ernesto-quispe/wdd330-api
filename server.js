@@ -2,7 +2,14 @@ const express = require('express');
 const cors = require('cors'); // Import the cors middleware
 
 const app = express();
-app.use(cors())
+app.use(cors(
+    {
+        origin: '*', // Replace with your frontend origin
+        credentials: false, // Enable credentials (cookies, authorization headers, etc.)
+        methods: 'GET', // Specify allowed HTTP methods
+        allowedHeaders: 'Content-Type, Authorization', // Specify allowed headers  
+    }
+));
 const PORT = process.env.PORT || 3030;
 
 function getRandomQuestion(max1, max2, level = 'easy', operator = '') {
