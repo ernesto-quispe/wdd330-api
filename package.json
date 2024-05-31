@@ -1,0 +1,16 @@
+{
+  "name": "wdd330-api",
+  "version": "1.0.0",
+  "description": "a super simple api to deliver random math questions",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Joshua Owen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.2"
+  }
+}
