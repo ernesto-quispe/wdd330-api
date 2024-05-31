@@ -1,5 +1,8 @@
 const express = require('express');
+const cors = require('cors'); // Import the cors middleware
+
 const app = express();
+app.use(cors())
 const PORT = process.env.PORT || 3030;
 
 function getRandomQuestion(max1, max2, level = 'easy', operator = '') {
