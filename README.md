@@ -39,3 +39,5 @@ multiply:
     http://127.0.0.1:8000/api/random?level=easy&operator=x
 adding max1 and max2 
     http://127.0.0.1:8000/api/random?level=easy&operator=x&max1=300&max2=10
+
+    https://wdd330-api.onrender.com/api/random

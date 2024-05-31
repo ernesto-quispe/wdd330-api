@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const PORT = process.env.PORT || 3030;
 
 function getRandomQuestion(max1, max2, level = 'easy', operator = '') {
     function getLevel(answer) {
