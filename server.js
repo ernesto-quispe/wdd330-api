@@ -32,19 +32,31 @@ const PORT = process.env.PORT || 3030;
 function getRandomQuestion(max1, max2, level = 'easy', operator = '') {
     function getLevel(answer) {
         if (answer < 150) {
-            const wrong1 = answer - 1;
-            const wrong2 = answer - 5;
-            const wrong3 = answer - 50;
+            let wrong1 = answer -  Math.floor(Math.random() * max1) + 1;
+            let wrong2 = answer -  Math.floor(Math.random() * max1) + 1;
+            let wrong3 = parseInt(answer) +  Math.floor(Math.random() * max1) + 1;
+            wrong1 = Number.isInteger(wrong1) ? wrong1.toString() : wrong1.toFixed(2);
+            wrong2 = Number.isInteger(wrong2) ? wrong2.toString() : wrong2.toFixed(2);
+            wrong3 = Number.isInteger(wrong3) ? wrong3.toString() : wrong3.toFixed(2);
+
             return { level: 'EASY', wrong: [wrong1, wrong2, wrong3] };
         } else if (answer < 500) {
-            const wrong1 = answer - 100;
-            const wrong2 = answer - 52;
-            const wrong3 = answer - 42;
+            let wrong1 = answer -  Math.floor(Math.random() * max1) + 1;
+            let wrong2 = answer -  Math.floor(Math.random() * max1) + 1;
+            let wrong3 = parseInt(answer) +   Math.floor(Math.random() * max1) + 1;
+            wrong1 = Number.isInteger(wrong1) ? wrong1.toString() : wrong1.toFixed(2);
+            wrong2 = Number.isInteger(wrong2) ? wrong2.toString() : wrong2.toFixed(2);
+            wrong3 = Number.isInteger(wrong3) ? wrong3.toString() : wrong3.toFixed(2);
+
             return { level: 'MEDIUM', wrong: [wrong1, wrong2, wrong3] };
         } else {
-            const wrong1 = answer - 250;
-            const wrong2 = answer - 30;
-            const wrong3 = answer - 11;
+            let wrong1 = answer -  Math.floor(Math.random() * max1) + 1;
+            let wrong2 = answer -  Math.floor(Math.random() * max1) + 1;
+            let wrong3 = parseInt(answer) +   Math.floor(Math.random() * max1) + 1;
+            wrong1 = Number.isInteger(wrong1) ? wrong1.toString() : wrong1.toFixed(2);
+            wrong2 = Number.isInteger(wrong2) ? wrong2.toString() : wrong2.toFixed(2);
+            wrong3 = Number.isInteger(wrong3) ? wrong3.toString() : wrong3.toFixed(2);
+
             return { level: 'HARD', wrong: [wrong1, wrong2, wrong3] };
         }
     }
