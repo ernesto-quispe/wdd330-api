@@ -93,7 +93,21 @@ function getRandomQuestion(max1, max2, level = 'easy', operator = '') {
 const validLevels = ['easy', 'medium', 'hard'];
 
 app.get('/api/random', (req, res) => {
-    const { max1 = 100, max2 = 100, level = 'easy', operator } = req.query;
+    let { max1 = 100, max2 = 100, level = 'easy', operator } = req.query;
+
+    if (operator == "sum"){
+        operator = "+"
+    }
+    else if (operator == "sub"){
+        operator = "-"
+    }
+    else if (operator == "mul"){
+        operator = "x"
+    }
+    else if (operator == "div"){
+        operator = "/"
+    }
+
 
     if (!validLevels.includes(level.toLowerCase())) {
         return res.status(400).json({ error: 'Enter a valid level!', validLevels });
