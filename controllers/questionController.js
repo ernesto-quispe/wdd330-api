@@ -103,4 +103,4 @@ const getQuestion = (req, res) => {
 
 
 
-module.exports = { getQuestion };
+module.exports = { getQuestion, getWrongAnswers};
