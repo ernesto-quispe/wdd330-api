@@ -4,8 +4,8 @@
   "description": "a super simple api to deliver random math questions",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon server.js",
-    "start": "node server.js",
+    "test": "node apps.js",
+    "start": "node apps.js",
     "build": "npm install"
   },
   "author": "Joshua Owen",

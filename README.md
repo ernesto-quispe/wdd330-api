@@ -41,3 +41,7 @@ adding max1 and max2
     http://127.0.0.1:8000/api/random?level=easy&operator=mul&max1=300&max2=10
 
     https://wdd330-api.onrender.com/api/random
+
+
+
+    http://127.0.0.1:3030/api/random?level=easy&operator=""&max1=10&max2=10
